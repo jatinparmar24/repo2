@@ -1,0 +1,21 @@
+tr{
+    margin: 10px;
+    word-spacing: 5px;
+    letter-spacing: 10px;
+    padding: 25px;
+}
+th{
+    background-color: blueviolet;
+    padding: 40px;
+}
+td{
+    background-color: lightgreen;
+    margin: 50px;
+    padding: 45px;
+    text-shadow: 30px;
+}
+p{
+    margin: 10px;width: 10px;background-color: orangered;
+    padding: 10px; border: 10px;
+    -webkit-text-stroke-color: aqua;
+}
