@@ -19,3 +19,21 @@ p{
     padding: 10px; border: 10px;
     -webkit-text-stroke-color: aqua;
 }
+#full{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.num a{
+    text-decoration: none;
+    margin: 10px;
+    list-style: none;
+}
+#dog{
+    border: 1px;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
