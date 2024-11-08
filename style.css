@@ -37,3 +37,18 @@ p{
     display: flex;
     justify-content: center;
 }
+.doog{
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    font-size: 20px;
+    background-color: aquamarine;
+}
+.dug{
+    position: absolute;
+    font-size: 30px;
+    right: 50px;
+    display: block;
+}

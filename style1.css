@@ -1,0 +1,10 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+#new ul{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    gap: 300px;
+}
