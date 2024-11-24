@@ -51,4 +51,5 @@ p{
     font-size: 30px;
     right: 50px;
     display: block;
+    flex-wrap: wrap;
 }
