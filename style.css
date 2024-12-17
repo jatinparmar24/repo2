@@ -31,7 +31,7 @@ p{
     list-style: none;
 }
 #dog{
-    border: 1px;
+    border: 2px;
     width: 50%;
     height: 50%;
     display: flex;
@@ -48,7 +48,7 @@ p{
 }
 .dug{
     position: absolute;
-    font-size: 30px;
+    font-size: 32px;
     right: 50px;
     display: block;
     flex-wrap: wrap;
