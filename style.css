@@ -9,13 +9,13 @@ th{
     padding: 40px;
 }
 td{
-    background-color: rgb(95, 242, 95);
+    background-color: rgb(5, 204, 5);
     margin: 50px;
     padding: 45px;
     text-shadow: 30px;
 }
 p{
-    margin: 10px;width: 10px;background-color: rgb(216, 62, 6);
+    margin: 10px;width: 10px;background-color: rgb(160, 45, 3);
     padding: 10px; border: 10px;
     -webkit-text-stroke-color: rgb(5, 201, 201);
 }
