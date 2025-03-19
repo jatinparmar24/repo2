@@ -5,6 +5,7 @@
 #new ul{
     display: flex;
     justify-content: center;
+    align-items: center;
     text-decoration: none;
     gap: 310px;
 }
