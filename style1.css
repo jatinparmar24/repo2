@@ -1,11 +1,127 @@
-*{
-    margin: 0%;
-    padding: 0%;
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-#new ul{
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #e0f7fa, #ffffff);
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+
+header#new {
+    background-color: #0d47a1;
+    padding: 15px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+header#new ul {
+    list-style: none;
     display: flex;
     justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+header#new ul li a {
+    color: #fff;
     text-decoration: none;
-    gap: 310px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header#new ul li a:hover {
+    color: #ffcc00;
+}
+
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fefefe;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section input[type="text"],
+section input[type="number"],
+section input[type="email"],
+section input[type="date"],
+section input[type="color"] {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+section input[type="text"]:focus,
+section input[type="number"]:focus,
+section input[type="email"]:focus,
+section input[type="date"]:focus {
+    border-color: #1976d2;
+    outline: none;
+}
+
+input[type="submit"] {
+    padding: 10px 25px;
+    background-color: #1976d2;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0d47a1;
+}
+
+h1, h2 {
+    margin-top: 20px;
+    color: #0d47a1;
+}
+
+p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+marquee {
+    font-weight: bold;
+    font-size: 18px;
+    color: #1a237e;
+    margin: 20px 0;
+}
+
+marquee img {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* media  */
+@media (max-width: 600px) {
+    header#new ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section input[type="submit"] {
+        width: 100%;
+    }
 }
