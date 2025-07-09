@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#first {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff6e7f, #bfe9ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.first-wrapper {
+  background-color: rgba(255, 255, 255, 0.97);
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 450px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.first-title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #ff3c6f;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.first-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.first-field {
+  position: relative;
+  margin-top: 5px;
+}
+
+.first-input {
+  width: 100%;
+  padding: 14px 12px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #fefefe;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.first-input:focus {
+  border-color: #ff3c6f;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 60, 111, 0.2);
+}
+
+.first-label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.97);
+  padding: 0 6px;
+  color: #777;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+  border-left: 3px solid transparent;
+}
+
+.first-input:focus + .first-label,
+.first-input:not(:placeholder-shown) + .first-label {
+  top: -9px;
+  left: 10px;
+  font-size: 12px;
+  color: #ff3c6f;
+  font-weight: bold;
+  border-left: 3px solid #ff3c6f;
+  padding-left: 5px;
+  box-shadow: 1px 1px 2px rgba(255, 60, 111, 0.2);
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+.first-submit {
+  padding: 14px;
+  background-color: #ff3c6f;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.first-submit:hover {
+  background-color: #e6345b;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 500px) {
+  .first-wrapper {
+    padding: 25px 18px;
+  }
+
+  .first-title {
+    font-size: 24px;
+  }
+}
