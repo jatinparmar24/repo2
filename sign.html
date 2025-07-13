@@ -159,6 +159,39 @@
   <!-- fourth design -->
 
 
+  <!-- fifth design -->
+<section id="fifth">
+  <div class="fifth-container" id="fifth-container">
+    <h2 class="fifth-title">Create Your Account</h2>
+    <form class="fifth-form" id="fifth-form" onsubmit="handleSubmit(event)">
+      <div class="fifth-field">
+        <input type="text" id="fullname" name="fullname" required />
+        <label for="fullname">Full Name</label>
+      </div>
+
+      <div class="fifth-field">
+        <input type="email" id="email" name="email" required />
+        <label for="email">Email Address</label>
+      </div>
+
+      <div class="fifth-field">
+        <input type="password" id="password" name="password" minlength="8" oninput="checkStrength(this.value)" required />
+        <label for="password">Password</label>
+        <div class="fifth-meter">
+          <div id="fifth-strength-bar" class="fifth-strength-bar"></div>
+        </div>
+        <div id="fifth-strength-text" class="fifth-strength-text">Strength: -</div>
+      </div>
+
+      <button class="fifth-btn" type="submit">Sign Up</button>
+    </form>
+    <div id="fifth-success" class="fifth-success">✅ Welcome aboard!</div>
+  </div>
+</section>
+
+
+  <!-- fifth design -->
+
   <!-- js -->
    <script src="sign.js"></script>
 </body>

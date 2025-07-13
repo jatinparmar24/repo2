@@ -74,3 +74,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+// fifth design
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form = document.getElementById("fifth-form");
+    const success = document.getElementById("fifth-success");
+    form.classList.add("fifth-fade-out");
+
+    setTimeout(() => {
+      form.style.display = "none";
+      success.classList.add("fifth-show");
+    }, 600);
+  }
+
+  function checkStrength(password) {
+    const bar = document.getElementById("fifth-strength-bar");
+    const text = document.getElementById("fifth-strength-text");
+    let strength = 0;
+
+    if (password.length >= 8) strength++;
+    if (/[A-Z]/.test(password)) strength++;
+    if (/[0-9]/.test(password)) strength++;
+    if (/[^A-Za-z0-9]/.test(password)) strength++;
+
+    const levels = ["Weak", "Fair", "Good", "Strong"];
+    const colors = ["#e74c3c", "#f39c12", "#27ae60", "#2980b9"];
+
+    bar.style.width = `${(strength / 4) * 100}%`;
+    bar.style.backgroundColor = colors[strength - 1] || "#ccc";
+    text.textContent = strength > 0 ? `Strength: ${levels[strength - 1]}` : "Strength: -";
+  }
