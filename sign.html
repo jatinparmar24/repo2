@@ -5,41 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sign Up</title>
   <link rel="stylesheet" href="sign.css" />
-  <!-- for second  -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <!-- for second  -->
+  <!-- Fonts and Icons for Design 2 -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
 
+  <!-- First Design -->
   <section id="first">
     <div class="first-wrapper">
       <form class="first-form">
         <h2 class="first-title">Sign Up</h2>
 
         <div class="first-field">
-          <input type="text" class="first-input" placeholder=" " required />
-          <label class="first-label">★ Full Name</label>
+          <input type="text" class="first-input" id="first-name" placeholder=" " required />
+          <label class="first-label" for="first-name">★ Full Name</label>
         </div>
 
         <div class="first-field">
-          <input type="email" class="first-input" placeholder=" " required />
-          <label class="first-label">★ Email Address</label>
+          <input type="email" class="first-input" id="first-email" placeholder=" " required />
+          <label class="first-label" for="first-email">★ Email Address</label>
         </div>
 
         <div class="first-field">
-          <input type="text" class="first-input" placeholder=" " required />
-          <label class="first-label">★ Username</label>
+          <input type="text" class="first-input" id="first-username" placeholder=" " required />
+          <label class="first-label" for="first-username">★ Username</label>
         </div>
 
         <div class="first-field">
-          <input type="password" class="first-input" placeholder=" " required />
-          <label class="first-label">★ Password</label>
+          <input type="password" class="first-input" id="first-password" placeholder=" " required />
+          <label class="first-label" for="first-password">★ Password</label>
         </div>
 
         <div class="first-field">
-          <input type="password" class="first-input" placeholder=" " required />
-          <label class="first-label">★ Confirm Password</label>
+          <input type="password" class="first-input" id="first-confirm" placeholder=" " required />
+          <label class="first-label" for="first-confirm">★ Confirm Password</label>
         </div>
 
         <button type="submit" class="first-submit">Create Account</button>
@@ -47,34 +47,32 @@
     </div>
   </section>
 
-  <!-- first design -->
-
-  <!-- second design -->
+  <!-- Second Design -->
   <section id="second">
     <div class="second-container">
       <h2 class="second-title">Create Your Account</h2>
-      <form>
+      <form class="second-form">
         <div class="second-form-group">
-          <input type="text" required class="second-input" />
-          <label class="second-label">Full Name</label>
+          <input type="text" required class="second-input" id="second-name" />
+          <label class="second-label" for="second-name">Full Name</label>
           <i class="fas fa-user second-icon"></i>
         </div>
 
         <div class="second-form-group">
-          <input type="email" required class="second-input" />
-          <label class="second-label">Email</label>
+          <input type="email" required class="second-input" id="second-email" />
+          <label class="second-label" for="second-email">Email</label>
           <i class="fas fa-envelope second-icon"></i>
         </div>
 
         <div class="second-form-group">
-          <input type="password" required class="second-input" />
-          <label class="second-label">Password</label>
+          <input type="password" required class="second-input" id="second-password" />
+          <label class="second-label" for="second-password">Password</label>
           <i class="fas fa-lock second-icon"></i>
         </div>
 
         <div class="second-form-group">
-          <input type="password" required class="second-input" />
-          <label class="second-label">Confirm Password</label>
+          <input type="password" required class="second-input" id="second-confirm" />
+          <label class="second-label" for="second-confirm">Confirm Password</label>
           <i class="fas fa-lock second-icon"></i>
         </div>
 
@@ -83,12 +81,8 @@
     </div>
   </section>
 
-
-
-  <!-- second design -->
-
-  <!-- third design -->
-   <section id="third">
+  <!-- Third Design -->
+  <section id="third">
     <div class="third-container">
       <h2 class="third-heading">Join RoboVerse</h2>
       <form class="third-form">
@@ -109,90 +103,82 @@
     </div>
   </section>
 
-  <!-- third design -->
-
-  <!-- fourth design -->
-<section id="fourth">
-  <button class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
-  <div class="coastal-signup">
-    <div class="coastal-box">
-      <h2 class="coastal-title">Create Your Coastal Account</h2>
-      <form id="signupForm" class="coastal-form" autocomplete="off">
-        <div class="coastal-field">
-          <input type="text" id="name" required />
-          <label for="name">Full Name</label>
-        </div>
-        <div class="coastal-field">
-          <input type="tel" id="phone" required />
-          <label for="phone">Phone Number</label>
-        </div>
-        <div class="coastal-field">
-          <input type="email" id="email" required />
-          <label for="email">Email</label>
-        </div>
-        <div class="coastal-field">
-          <input type="password" id="password" required />
-          <label for="password">Password</label>
-        </div>
-        <div class="coastal-field">
-          <input type="password" id="confirm" required />
-          <label for="confirm">Confirm Password</label>
-        </div>
-        <div class="coastal-check">
-          <input type="checkbox" id="agree" required />
-          <label for="agree">I agree to the <a href="#">terms</a></label>
-        </div>
-        <!-- Important: type="button" to prevent default form submission -->
-       <button type="button" class="coastal-btn" id="submitBtn">
-         <span class="btn-text">Sign Up</span>
-         <span class="btn-spinner"></span>
-         <span class="btn-success">✔</span>
-       </button>
-
-      </form>
+  <!-- Fourth Design -->
+  <section id="fourth">
+    <button class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+    <div class="coastal-signup">
+      <div class="coastal-box">
+        <h2 class="coastal-title">Create Your Coastal Account</h2>
+        <form id="fourth-form" class="coastal-form" autocomplete="off">
+          <div class="coastal-field">
+            <input type="text" id="fourth-name" required />
+            <label for="fourth-name">Full Name</label>
+          </div>
+          <div class="coastal-field">
+            <input type="tel" id="fourth-phone" required />
+            <label for="fourth-phone">Phone Number</label>
+          </div>
+          <div class="coastal-field">
+            <input type="email" id="fourth-email" required />
+            <label for="fourth-email">Email</label>
+          </div>
+          <div class="coastal-field">
+            <input type="password" id="fourth-password" required />
+            <label for="fourth-password">Password</label>
+          </div>
+          <div class="coastal-field">
+            <input type="password" id="fourth-confirm" required />
+            <label for="fourth-confirm">Confirm Password</label>
+          </div>
+          <div class="coastal-check">
+            <input type="checkbox" id="fourth-agree" required />
+            <label for="fourth-agree">I agree to the <a href="#">terms</a></label>
+          </div>
+          <button type="button" class="coastal-btn" id="fourth-submit">
+            <span class="btn-text">Sign Up</span>
+            <span class="btn-spinner"></span>
+            <span class="btn-success">✔</span>
+          </button>
+        </form>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-
-  <!-- fourth design -->
-
-
-  <!-- fifth design -->
-<section id="fifth">
-  <div class="fifth-container" id="fifth-container">
-    <h2 class="fifth-title">Create Your Account</h2>
-    <form class="fifth-form" id="fifth-form" onsubmit="handleSubmit(event)">
-      <div class="fifth-field">
-        <input type="text" id="fullname" name="fullname" required />
-        <label for="fullname">Full Name</label>
-      </div>
-
-      <div class="fifth-field">
-        <input type="email" id="email" name="email" required />
-        <label for="email">Email Address</label>
-      </div>
-
-      <div class="fifth-field">
-        <input type="password" id="password" name="password" minlength="8" oninput="checkStrength(this.value)" required />
-        <label for="password">Password</label>
-        <div class="fifth-meter">
-          <div id="fifth-strength-bar" class="fifth-strength-bar"></div>
+  <!-- Fifth Design -->
+  <section id="fifth">
+    <div class="fifth-container" id="fifth-container">
+      <h2 class="fifth-title">Create Your Account</h2>
+      <form class="fifth-form" id="fifth-form" onsubmit="handleSubmit(event)">
+        <div class="fifth-field">
+          <input type="text" id="fifth-fullname" name="fullname" required />
+          <label for="fifth-fullname">Full Name</label>
         </div>
-        <div id="fifth-strength-text" class="fifth-strength-text">Strength: -</div>
-      </div>
 
-      <button class="fifth-btn" type="submit">Sign Up</button>
-    </form>
-    <div id="fifth-success" class="fifth-success">✅ Welcome aboard!</div>
-  </div>
-</section>
+        <div class="fifth-field">
+          <input type="email" id="fifth-email" name="email" required pattern="^[^@]+@[^@]+\.[^@]+$" />
+          <label for="fifth-email">Email Address</label>
+        </div>
 
+        <div class="fifth-field">
+          <input type="password" id="fifth-password" name="password" minlength="8" oninput="checkStrength(this.value)" required />
+          <label for="fifth-password">Password</label>
+          <div class="fifth-meter">
+            <div id="fifth-strength-bar" class="fifth-strength-bar"></div>
+          </div>
+          <div id="fifth-strength-text" class="fifth-strength-text">Strength: -</div>
+          <div class="fifth-toggle">
+            <label for="fifth-showPassword">Show Password</label>
+            <input type="checkbox" id="fifth-showPassword" onclick="togglePassword()">
+          </div>
+        </div>
 
-  <!-- fifth design -->
+        <button class="fifth-btn" type="submit">Sign Up</button>
+      </form>
+      <div id="fifth-success" class="fifth-success">✅ Welcome aboard!</div>
+      <div id="confetti" class="confetti"></div>
+    </div>
+  </section>
 
-  <!-- js -->
-   <script src="sign.js"></script>
+  <script src="sign.js"></script>
 </body>
 </html>
