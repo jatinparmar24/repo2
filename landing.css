@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +9,9 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f7f6;
+  color: #2c3e50;
 }
 
 section {
@@ -17,10 +21,9 @@ section {
   flex: 1;
 }
 
-/* Garden section */
+/* Garden Section */
 #garden {
   background: linear-gradient(135deg, #f0f4f3, #cfe8dc);
-  color: #2c3e50;
   padding: 2rem;
   position: relative;
   overflow: hidden;
@@ -30,20 +33,23 @@ section {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
+/* Navigation */
 .garden-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 10;
 }
 
 .garden-logo {
   font-size: 1.8rem;
   font-weight: bold;
+  color: #2c3e50;
 }
 
 .garden-toggle {
@@ -60,6 +66,7 @@ section {
   border-radius: 2px;
 }
 
+/* Nav Menu (desktop) */
 .garden-menu {
   list-style: none;
   display: flex;
@@ -73,6 +80,7 @@ section {
   font-weight: 500;
   position: relative;
   padding: 0.5rem 0;
+  transition: color 0.3s ease;
 }
 
 .garden-menu li a::after {
@@ -86,11 +94,21 @@ section {
   transition: width 0.4s ease;
 }
 
+.garden-menu li a:hover {
+  color: #219150;
+}
+
 .garden-menu li a:hover::after {
   width: 100%;
 }
 
+/* Hero Section */
 .garden-hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 4rem 2rem;
   background: radial-gradient(circle at top, #ffffff 0%, #e0f2e9 100%);
@@ -130,6 +148,7 @@ section {
   background: #219150;
 }
 
+/* Garden Features */
 .garden-features {
   display: flex;
   flex-wrap: wrap;
@@ -163,6 +182,7 @@ section {
   color: #27ae60;
 }
 
+/* Floating Blobs */
 .garden-blobs {
   position: absolute;
   top: -100px;
@@ -200,6 +220,7 @@ section {
   50% { transform: translateY(40px) scale(1.05); }
 }
 
+/* Scroll Fade Animation */
 .scroll-fade {
   opacity: 0;
   transform: translateY(30px);
@@ -211,13 +232,201 @@ section {
   transform: translateY(0);
 }
 
-/* Responsive */
+
+/* garden theme */
+
+
+
+/* space theme */
+
+#space {
+  position: relative;
+  height: 200vh;
+  background: radial-gradient(ellipse at bottom, #0a0f2c 0%, #000000 100%);
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  padding: 4vh 5vw;
+}
+
+.space-stars {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  animation: moveStars 100s linear infinite;
+  z-index: 0;
+  opacity: 0.2;
+}
+
+@keyframes moveStars {
+  from { background-position: 0 0; }
+  to { background-position: 10000px 10000px; }
+}
+
+.space-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Hero */
+.space-hero {
+  text-align: center;
+  margin-top: 5vh;
+}
+
+.space-heading {
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #00f0ff, #ff00f0);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+.space-subtitle {
+  font-size: 1.2rem;
+  color: #ccc;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.space-button {
+  background-color: #ff00f0;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.space-button:hover {
+  background-color: #c800c8;
+  transform: scale(1.05);
+}
+
+/* Counters */
+.space-counters {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: 4vh 0;
+}
+
+.space-counter {
+  font-size: 1.2rem;
+  color: #a0f0ff;
+}
+
+.space-counter span {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00f0ff;
+}
+
+/* Cards */
+.space-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  padding: 4vh 0;
+}
+
+.space-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.space-card::after {
+  content: "";
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, #00f0ff33 0%, transparent 60%);
+  transform: scale(0);
+  transition: transform 0.5s ease;
+  z-index: 0;
+}
+
+.space-card:hover::after {
+  transform: scale(1.2);
+}
+
+.space-card h3 {
+  font-size: 1.5rem;
+  color: #00f0ff;
+  margin-bottom: 1rem;
+  z-index: 1;
+  position: relative;
+}
+
+.space-card p {
+  font-size: 1rem;
+  color: #ddd;
+  z-index: 1;
+  position: relative;
+}
+
+/* Bottom Text */
+.space-bottom-text {
+  text-align: center;
+  margin-top: 4vh;
+  font-size: 1rem;
+  color: #bbb;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #00f0ff, 0 0 20px #ff00f0;
+  }
+  to {
+    text-shadow: 0 0 20px #00ffff, 0 0 30px #ff00ff;
+  }
+}
+
+/* space theme */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Nav and Layout */
 @media (max-width: 768px) {
+
+  /* garden theme */
+
+
   .garden-menu {
     flex-direction: column;
     background: #eaf6f0;
     position: absolute;
-    top: 70px;
+    top: 100%;
     left: 0;
     width: 100%;
     padding: 1rem 2rem;
@@ -225,6 +434,9 @@ section {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
+    z-index: 20;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   }
 
   .garden-menu.show {
@@ -252,4 +464,8 @@ section {
   .garden-menu li {
     margin: 0.5rem 0;
   }
+
+  /* garden theme */
+
+
 }
