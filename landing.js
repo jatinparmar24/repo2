@@ -24,3 +24,19 @@ toggle.addEventListener('click', () => {
   menu.classList.toggle('show');
 });
 
+
+// space theme
+
+const text = "Welcome to the Cosmos";
+const target = document.getElementById("type-target");
+let index = 0;
+
+function typeText() {
+  if (index < text.length) {
+    target.innerHTML += text.charAt(index);
+    index++;
+    setTimeout(typeText, 100);
+  }
+}
+
+window.addEventListener("DOMContentLoaded", typeText);

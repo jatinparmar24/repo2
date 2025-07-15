@@ -264,16 +264,57 @@ section {
   to { background-position: 10000px 10000px; }
 }
 
+.space-objects {
+  position: absolute;
+  width: 100%; height: 100%;
+  top: 0; left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.space-rocket {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  width: 50px;
+  height: 100px;
+  background: linear-gradient(#fff, #ccc);
+  border-radius: 10px;
+  animation: rocket-float 6s ease-in-out infinite;
+  box-shadow: 0 0 20px #ff00f0;
+}
+
+@keyframes rocket-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.space-astronaut {
+  position: absolute;
+  top: 20%;
+  right: 15%;
+  width: 60px;
+  height: 60px;
+  background: #ccc;
+  border-radius: 50%;
+  animation: astro-float 5s ease-in-out infinite;
+  box-shadow: 0 0 10px #00f0ff;
+}
+
+@keyframes astro-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(10deg); }
+}
+
 .space-container {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
 
-/* Hero */
 .space-hero {
   text-align: center;
   margin-top: 5vh;
@@ -283,10 +324,8 @@ section {
   font-size: 3.5rem;
   letter-spacing: 2px;
   margin-bottom: 1rem;
-  background: linear-gradient(90deg, #00f0ff, #ff00f0);
-  -webkit-background-clip: text;
-  color: transparent;
-  animation: glow 3s ease-in-out infinite alternate;
+  color: #00f0ff;
+  min-height: 70px;
 }
 
 .space-subtitle {
@@ -312,7 +351,6 @@ section {
   transform: scale(1.05);
 }
 
-/* Counters */
 .space-counters {
   display: flex;
   justify-content: space-around;
@@ -332,7 +370,6 @@ section {
   color: #00f0ff;
 }
 
-/* Cards */
 .space-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -383,7 +420,6 @@ section {
   position: relative;
 }
 
-/* Bottom Text */
 .space-bottom-text {
   text-align: center;
   margin-top: 4vh;
@@ -392,15 +428,6 @@ section {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-}
-
-@keyframes glow {
-  from {
-    text-shadow: 0 0 10px #00f0ff, 0 0 20px #ff00f0;
-  }
-  to {
-    text-shadow: 0 0 20px #00ffff, 0 0 30px #ff00ff;
-  }
 }
 
 /* space theme */
