@@ -40,3 +40,14 @@ function typeText() {
 }
 
 window.addEventListener("DOMContentLoaded", typeText);
+
+
+// fitness theme
+
+// Toggle hamburger menu
+const hamburger = document.querySelector('.fitness-hamburger');
+const menus = document.querySelector('.fitness-menu');
+
+hamburger.addEventListener('click', () => {
+  menus.classList.toggle('active');
+});

@@ -432,7 +432,189 @@ section {
 
 /* space theme */
 
+/* fitness theme */
 
+#fitness-hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #000000, #1f4037, #99f2c8);
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ========== NAVIGATION BAR ========== */
+.fitness-nav {
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+.fitness-logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #00ffc8;
+}
+
+.fitness-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.fitness-menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.fitness-menu li a:hover {
+  color: #00ffc8;
+}
+
+/* ========== HAMBURGER MENU ========== */
+.fitness-hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.fitness-hamburger svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+}
+
+/* ========== HERO CONTENT ========== */
+.fitness-hero-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+}
+
+.fitness-text {
+  max-width: 800px;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.fitness-text h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.fitness-text h1 span {
+  color: #00ffc8;
+}
+
+.fitness-text p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #e0fdfb;
+}
+
+/* ========== STATISTICS SECTION ========== */
+.fitness-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.fitness-stat {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 255, 200, 0.15);
+  min-width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: bounceIn 1s ease-in-out;
+}
+
+.fitness-stat h2 {
+  font-size: 28px;
+  color: #00ffc8;
+}
+
+.fitness-stat p {
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 4px;
+}
+
+/* ========== SVG ICONS ========== */
+.fitness-stat .icon {
+  margin-bottom: 10px;
+  width: 40px;
+  height: 40px;
+  fill: #00ffc8;
+}
+
+/* ========== BUTTON ========== */
+.fitness-btn {
+  padding: 14px 34px;
+  background: #00ffc8;
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.fitness-btn:hover {
+  background: #00cfa0;
+  transform: scale(1.05);
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+/* fitness theme */
 
 
 
@@ -494,5 +676,40 @@ section {
 
   /* garden theme */
 
+  /* fitness theme */
+   .fitness-text h1 {
+    font-size: 38px;
+  }
+
+  .fitness-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    background: #0f2027;
+    width: 60%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease;
+    gap: 40px;
+    display: flex;
+    z-index: 99;
+  }
+
+  .fitness-menu.active {
+    right: 0;
+  }
+
+  .fitness-hamburger {
+    display: block;
+  }
+
+  .fitness-stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* fitness theme */
 
 }
