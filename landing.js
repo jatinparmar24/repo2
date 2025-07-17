@@ -51,3 +51,10 @@ const menus = document.querySelector('.fitness-menu');
 hamburger.addEventListener('click', () => {
   menus.classList.toggle('active');
 });
+
+
+// startup theme
+
+    function toggleMenu() {
+      document.getElementById('startupMenu').classList.toggle('active');
+    }
