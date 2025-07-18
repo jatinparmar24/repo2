@@ -58,3 +58,12 @@ hamburger.addEventListener('click', () => {
     function toggleMenu() {
       document.getElementById('startupMenu').classList.toggle('active');
     }
+
+
+
+// nebula theme
+  const burger = document.querySelector('.nebula-hamburger');
+  const list = document.querySelector('.nebula-menu');
+  burger.addEventListener('click', () => {
+    list.classList.toggle('show');
+  });
