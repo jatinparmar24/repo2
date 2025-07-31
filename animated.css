@@ -1,0 +1,189 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+/* section 1 marketing */
+.market-hero {
+  position: relative;
+  height: 100svh;
+  background: linear-gradient(135deg, #1dd1a1, #54a0ff);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.market-blob-bg {
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 150%;
+  height: 150%;
+  z-index: 0;
+}
+
+.market-content {
+  z-index: 1;
+  max-width: 800px;
+}
+
+.market-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: fadeSlideUp 1s ease forwards;
+}
+
+.market-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeSlideUp 1s ease 0.3s forwards;
+}
+
+.market-btn {
+  padding: 0.9rem 2rem;
+  background: #fff;
+  color: #1dd1a1;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 0;
+  animation: bounceIn 1s ease 0.6s forwards;
+}
+
+.market-btn:hover {
+  background: #f2f2f2;
+}
+
+.market-points {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.market-point {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1rem;
+  opacity: 0;
+  animation: fadeSlideUp 0.6s ease forwards;
+}
+
+.market-point:nth-child(1) { animation-delay: 0.8s; }
+.market-point:nth-child(2) { animation-delay: 1s; }
+.market-point:nth-child(3) { animation-delay: 1.2s; }
+
+/* ========= Icons ========= */
+
+.market-icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: transform 1s ease, opacity 1s ease;
+  z-index: 1;
+}
+
+.market-top-left.active {
+  top: 10%;
+  left: 10%;
+  transform: translate(0, 0) scale(1);
+  opacity: 1;
+}
+
+.market-top-right.active {
+  top: 10%;
+  right: 10%;
+  transform: translate(0, 0) scale(1);
+  opacity: 1;
+}
+
+.market-bottom-left.active {
+  bottom: 10%;
+  left: 10%;
+  transform: translate(0, 0) scale(1);
+  opacity: 1;
+}
+
+.market-bottom-right.active {
+  bottom: 10%;
+  right: 10%;
+  transform: translate(0, 0) scale(1);
+  opacity: 1;
+}
+
+/* ========= Animations ========= */
+
+@keyframes fadeSlideUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  60% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(-15deg); }
+  50% { transform: rotate(15deg); }
+  100% { transform: rotate(-15deg); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Animate class assignment */
+.rotate.active svg {
+  animation: rotate 2s ease-in-out infinite;
+}
+
+.spin.active svg {
+  animation: spin 3s linear infinite;
+}
+
+.bounce.active svg {
+  animation: bounce 1.5s ease-in-out infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .market-title {
+    font-size: 2.2rem;
+  }
+  .market-subtitle {
+    font-size: 1rem;
+  }
+  .market-point {
+    font-size: 0.9rem;
+  }
+  .market-points {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* section 1 marketing */
