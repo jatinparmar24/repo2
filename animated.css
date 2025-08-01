@@ -170,8 +170,145 @@
   animation: bounce 1.5s ease-in-out infinite;
 }
 
+
+/* section 1 marketing */
+
+
+/* section 2 tourism */
+.tour-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  position: relative;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.tour-header {
+  text-align: center;
+  animation: fadeDown 1s ease-in-out;
+}
+
+.tour-header h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #ffeb3b;
+}
+
+.tour-header p {
+  font-size: 1.2rem;
+  color: #e0f7fa;
+  margin-top: 0.5rem;
+}
+
+.tour-cards {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.tour-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 280px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+}
+
+.tour-card::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 30px;
+  height: 30px;
+  background: #ffeb3b;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(255, 235, 59, 0.7);
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.tour-card.active::before {
+  transform: scale(1);
+}
+
+.tour-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.tour-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  animation: bounce 2s infinite;
+}
+
+.tour-waves svg {
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+  animation: waveSlide 6s ease-in-out infinite alternate;
+}
+
+@keyframes fadeDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes waveSlide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-30px);
+  }
+}
+
+
 /* Responsive */
+
+@media (max-width: 480px) {
+  /* section 2 tourism */
+  .tour-header p {
+    font-size: 1rem;
+  }
+  .tour-cards {
+    gap: 1rem;
+  }
+    /* section 2 tourism */
+
+}
+
+
+
 @media (max-width: 768px) {
+  /* section 1 marketing */
   .market-title {
     font-size: 2.2rem;
   }
@@ -185,5 +322,21 @@
     flex-direction: column;
     align-items: center;
   }
+  /* section 1 marketing */
+
+  /* section 2 tourism */
+    .tour-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .tour-card {
+    width: 90%;
+  }
+  /* section 2 tourism */
 }
-/* section 1 marketing */
+@media (max-width: 768px) {
+
+}
+
+
+/* section 2 tourism */
