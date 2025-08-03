@@ -491,6 +491,274 @@
 /* section 3 dairy farm */
 
 
+/* section 4 home decore */
+.decor-hero {
+  min-height: 100vh;
+  position: relative;
+  background: linear-gradient(135deg, #fdf6ec, #e0c3fc);
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.decor-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.decor-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ec4899;
+  position: relative;
+}
+
+.decor-logo::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: #ec4899;
+  border-radius: 50%;
+  animation: pulse 1s infinite alternate;
+}
+
+.decor-hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #ec4899;
+}
+
+.decor-nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.decor-nav-links a {
+  position: relative;
+  font-weight: 500;
+  padding: 0.5rem;
+}
+
+.decor-nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #ec4899;
+  transition: width 0.3s;
+}
+
+.decor-nav-links a:hover {
+  color: #ec4899;
+}
+
+.decor-nav-links a:hover::after {
+  width: 100%;
+}
+
+.decor-badge {
+  text-align: center;
+  margin: 0.5rem auto 1rem;
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 0.3rem 1rem;
+  border-radius: 999px;
+  display: inline-block;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 2s ease;
+}
+
+.decor-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.decor-title {
+  font-size: 2.8rem;
+  color: #1f2937;
+  animation: slideIn 1s ease;
+}
+
+.decor-subtitle {
+  color: #4b5563;
+  font-size: 1.2rem;
+  animation: fadeIn 1.5s ease;
+}
+
+.decor-btn {
+  margin-top: 1.5rem;
+  padding: 0.75rem 2rem;
+  border: none;
+  background: #ec4899;
+  color: white;
+  font-size: 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.decor-btn::before {
+  content: '';
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #be185d;
+  transition: left 0.3s;
+  z-index: 0;
+}
+
+.decor-btn:hover::before {
+  left: 0;
+}
+
+.decor-tagline-strip {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  animation: fadeIn 2s;
+}
+
+.decor-tag {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  backdrop-filter: blur(4px);
+  transition: background 0.3s;
+}
+
+.decor-tag:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.decor-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.decor-icon-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.decor-icon-card:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+.decor-icon-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(236,72,153,0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.decor-icon-card:hover::before {
+  opacity: 1;
+}
+
+.decor-icon-card svg {
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s;
+}
+
+.decor-icon-card:hover svg {
+  transform: rotate(5deg) scale(1.1);
+}
+
+.decor-icon-card span {
+  display: block;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.decor-float {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(236, 72, 153, 0.1);
+  animation: float 6s infinite ease-in-out;
+  z-index: 0;
+}
+
+.decor-float-1 {
+  top: 10%;
+  left: 5%;
+}
+
+.decor-float-2 {
+  bottom: 10%;
+  right: 8%;
+}
+
+.decor-quote {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #374151;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  animation: fadeIn 4s ease-in;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.4); }
+}
+
+@keyframes slideIn {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+/* section 4 home decore */
+
 
 
 /* Responsive */
@@ -535,10 +803,54 @@
     width: 90%;
   }
   /* section 2 tourism */
+
+  /* section 4 home decore */
+    .decor-hamburger {
+    display: block;
+  }
+
+  .decor-nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+  }
+
+  .decor-nav-links.active {
+    display: flex;
+  }
+
+  .decor-nav-links li {
+    margin: 0.5rem 0;
+  }
+    .decor-title {
+    font-size: 2rem;
+  }
+
+  .decor-subtitle {
+    font-size: 1rem;
+  }
+
+  .decor-nav-links {
+    gap: 1rem;
+  }
+
+  .decor-quote {
+    font-size: 0.8rem;
+    left: 1rem;
+    bottom: 1rem;
+  }
+
+  /* section 4 home decore */
 }
-@media (max-width: 768px) {
-
-}
 
 
-/* section 2 tourism */
+
+

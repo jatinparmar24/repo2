@@ -62,19 +62,12 @@ document.addEventListener("DOMContentLoaded", () => {
 // section 2 tourism
 
 
-// section 3 dairy farm
-// Toggle mobile navbar
-const toggle = document.getElementById('farm-menu-toggle');
-const links = document.querySelector('.farm-nav-links');
+// section 4 home decore
+const hamburger = document.getElementById('decor-hamburger');
+const navLinks = document.getElementById('decor-nav-links');
 
-toggle.addEventListener('click', () => {
-  links.classList.toggle('active');
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
 });
 
-// Smooth scroll on CTA button
-document.querySelector('.farm-cta-btn').addEventListener('click', () => {
-  alert("Scrolling to next section (if available)");
-  // Future: document.querySelector('#next-section').scrollIntoView({ behavior: 'smooth' });
-});
-
-// section 3 dairy farm
+// section 4 home decore
