@@ -71,3 +71,26 @@ hamburger.addEventListener('click', () => {
 });
 
 // section 4 home decore
+
+// section 5 ai
+const tagline = "Transforming the world with AI & Robotics...";
+let i = 0;
+
+function typeWriter() {
+  if (i < tagline.length) {
+    document.getElementById("ai-typewriter").innerHTML += tagline.charAt(i);
+    i++;
+    setTimeout(typeWriter, 50);
+  }
+}
+
+window.onload = () => {
+  typeWriter();
+};
+
+function toggleMenu() {
+  const nav = document.getElementById("ai-links");
+  nav.classList.toggle("ai-show");
+}
+
+// section 5 ai

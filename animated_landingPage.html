@@ -227,6 +227,82 @@
 
     <!-- section 4 home decore -->
 
+    <!-- section 5 ai -->
+     <section class="ai-hero">
+  <!-- SVG Background Design -->
+  <svg class="ai-bg-svg" viewBox="0 0 800 400" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="glowLine" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#00f6ff" />
+        <stop offset="100%" stop-color="#6f00ff" />
+      </linearGradient>
+    </defs>
+    <path d="M0 100 Q400 200 800 100" stroke="url(#glowLine)" stroke-width="2" fill="none" />
+    <circle cx="400" cy="200" r="4" fill="#00f6ff">
+      <animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite" />
+    </circle>
+  </svg>
+
+  <!-- Navbar -->
+  <nav class="ai-navbar">
+    <div class="ai-logo">🤖 AI Robotics</div>
+    <div class="ai-menu" onclick="toggleMenu()">☰</div>
+    <ul class="ai-navlinks" id="ai-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Features</a></li>
+      <li><a href="#">Tech</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Content -->
+  <div class="ai-content">
+    <h1 class="ai-title">Innovating the Future</h1>
+    <p class="ai-tagline" id="ai-typewriter"></p>
+
+    <div class="ai-stats">
+      <div class="ai-stat">🤖 <span>1M+</span> Automations</div>
+      <div class="ai-stat">⚙️ <span>99.9%</span> Accuracy</div>
+      <div class="ai-stat">🚀 <span>0.01s</span> Response Time</div>
+    </div>
+
+    <div class="ai-buttons">
+      <button class="ai-btn">Get Started</button>
+      <button class="ai-btn ai-secondary">Learn More</button>
+    </div>
+  </div>
+
+  <!-- Feature Cards with SVGs -->
+  <div class="ai-features">
+    <div class="ai-card">
+      <svg class="ai-icon-svg" viewBox="0 0 64 64">
+        <circle cx="32" cy="32" r="30" stroke="#00f6ff" stroke-width="2" fill="none" />
+        <path d="M20 32 Q32 12 44 32 Q32 52 20 32" fill="#00f6ff" opacity="0.3" />
+      </svg>
+      <h3>AI Brain</h3>
+      <p>Neural processors for human-like cognition.</p>
+    </div>
+    <div class="ai-card">
+      <svg class="ai-icon-svg" viewBox="0 0 64 64">
+        <rect x="12" y="12" width="40" height="40" rx="8" stroke="#00f6ff" stroke-width="2" fill="none" />
+        <circle cx="32" cy="32" r="6" fill="#00f6ff" />
+      </svg>
+      <h3>Human-Robot</h3>
+      <p>Emotion-aware, interactive AI systems.</p>
+    </div>
+    <div class="ai-card">
+      <svg class="ai-icon-svg" viewBox="0 0 64 64">
+        <polygon points="32,10 52,54 12,54" stroke="#00f6ff" stroke-width="2" fill="none" />
+        <circle cx="32" cy="32" r="4" fill="#00f6ff" />
+      </svg>
+      <h3>Autonomous Control</h3>
+      <p>Real-time navigation and decisions.</p>
+    </div>
+  </div>
+</section>
+
+    <!-- section 5 ai -->
+
 <!-- section 1 -->
    <!-- Lottie script -->
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
