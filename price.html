@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price</title>
+    <link rel="stylesheet" href="price.css">
+</head>
+<body>
+    
+    <!-- section 1 -->
+     <section class="price-section">
+  <div class="price-toggle">
+    <span>Monthly</span>
+    <label class="price-switch">
+      <input type="checkbox" id="priceToggle">
+      <span class="price-slider"></span>
+    </label>
+    <span>Yearly</span>
+  </div>
+
+  <div class="price-cards">
+    <!-- Basic -->
+    <div class="price-card">
+      <h3>Basic</h3>
+      <p class="price-amount" data-month="₹499" data-year="₹4999">₹499</p>
+      <ul>
+        <li>✔ 5 Courses</li>
+        <li>✔ Email Support</li>
+        <li>✖ Community Access</li>
+      </ul>
+      <button class="price-btn">Choose Plan</button>
+    </div>
+
+    <!-- Pro -->
+    <div class="price-card price-featured">
+      <h3>Pro</h3>
+      <p class="price-amount" data-month="₹999" data-year="₹9999">₹999</p>
+      <ul>
+        <li>✔ 20 Courses</li>
+        <li>✔ Priority Support</li>
+        <li>✔ Community Access</li>
+      </ul>
+      <button class="price-btn">Choose Plan</button>
+    </div>
+
+    <!-- Premium -->
+    <div class="price-card">
+      <h3>Premium</h3>
+      <p class="price-amount" data-month="₹1499" data-year="₹14999">₹1499</p>
+      <ul>
+        <li>✔ Unlimited Courses</li>
+        <li>✔ 1-on-1 Mentorship</li>
+        <li>✔ Community Access</li>
+      </ul>
+      <button class="price-btn">Choose Plan</button>
+    </div>
+  </div>
+</section>
+
+
+    <!-- section 1 -->
+
+<script src="price.js"></script>
+</body>
+</html>

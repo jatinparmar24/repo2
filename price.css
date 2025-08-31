@@ -1,0 +1,144 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+/* section 1 */
+.price-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(145deg, #1c1e26, #2a2d3a);
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.price-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+  flex-wrap: wrap;
+}
+
+.price-switch {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  display: inline-block;
+}
+.price-switch input {
+  display: none;
+}
+.price-slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: #444;
+  border-radius: 30px;
+  transition: .4s;
+}
+.price-slider:before {
+  content: "";
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background: #fff;
+  border-radius: 50%;
+  transition: .4s;
+}
+.price-switch input:checked + .price-slider {
+  background: #0fd976;
+}
+.price-switch input:checked + .price-slider:before {
+  transform: translateX(30px);
+}
+
+.price-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 10px;
+}
+
+.price-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 30px 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.price-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+.price-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.price-amount {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #0fd976;
+}
+
+.price-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  line-height: 1.8;
+}
+
+.price-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #0fd976, #00b894);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.price-btn:hover {
+  background: linear-gradient(135deg, #00b894, #0fd976);
+}
+
+.price-featured {
+  background: linear-gradient(145deg, #2c3140, #383c4d);
+  border: 2px solid #0fd976;
+}
+
+/* section 1 */
+
+
+
+/* --- RESPONSIVE  --- */
+@media (max-width: 900px) {
+    /* section 1 */
+  .price-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  /* section 1 */
+}
+
+@media (max-width: 600px) {
+     /* section 1 */
+  .price-cards {
+    grid-template-columns: 1fr;
+  }
+  .price-card {
+    max-width: 100%;
+  }
+  /* section 1 */
+
+}
+
+
