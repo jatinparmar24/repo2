@@ -61,6 +61,55 @@
 
     <!-- section 1 -->
 
+    <!-- section 2 -->
+     <section class="calc-section">
+  <div class="calc-container">
+    <!-- Left Panel - Controls -->
+    <div class="calc-controls">
+      <h2>Customize Your Plan</h2>
+
+      <div class="calc-control">
+        <label for="projects">📁 Projects</label>
+        <input type="range" id="projects" min="1" max="50" value="10" />
+        <span id="projectsValue">10 Projects</span>
+      </div>
+
+      <div class="calc-control">
+        <label for="storage">💾 Storage</label>
+        <input type="range" id="storage" min="10" max="500" step="10" value="50" />
+        <span id="storageValue">50 GB Storage</span>
+      </div>
+
+      <div class="calc-control">
+        <label for="team">👥 Team Members</label>
+        <input type="range" id="team" min="1" max="20" value="5" />
+        <span id="teamValue">5 Members</span>
+      </div>
+
+      <div class="calc-toggle">
+        <span>Monthly</span>
+        <label class="calc-switch">
+          <input type="checkbox" id="billingToggle" />
+          <span class="calc-slider"></span>
+        </label>
+        <span>Yearly <small>(20% off)</small></span>
+      </div>
+    </div>
+
+    <!-- Right Panel - Price Card -->
+    <div class="calc-price-card">
+      <h3>Your Plan</h3>
+      <p class="calc-price">₹ <span id="priceValue">1299</span></p>
+      <p class="calc-summary">
+        <span id="summaryText">10 Projects + 50 GB + 5 Members</span>
+      </p>
+      <button class="calc-btn">Get This Plan</button>
+    </div>
+  </div>
+</section>
+
+    <!-- section 2 -->
+
 <script src="price.js"></script>
 </body>
 </html>
