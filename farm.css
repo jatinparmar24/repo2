@@ -1,0 +1,213 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background: #1b5e20;
+  overflow-x: hidden;
+}
+
+.farm-navbar {
+  width: 100%;
+  padding: 15px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+}
+.farm-logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.farm-logo span {
+  background: linear-gradient(90deg, #ffeb3b, #ff9800);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.farm-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.farm-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s;
+}
+.farm-links li a::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: #ffeb3b;
+  transition: width 0.3s ease;
+}
+.farm-links li a:hover {
+  color: #ffeb3b;
+}
+.farm-links li a:hover::before {
+  width: 100%;
+}
+
+.farm-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+.farm-hamburger span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.farm-hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.farm-hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.farm-hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+.farm-mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100vh;
+  background: #2e7d32;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  transition: right 0.5s ease;
+  z-index: 900;
+}
+.farm-mobile-menu a {
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: none;
+  position: relative;
+}
+.farm-mobile-menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #ffeb3b;
+  transform: translateX(-50%);
+  transition: width 0.3s;
+}
+.farm-mobile-menu a:hover::after {
+  width: 100%;
+}
+.farm-mobile-menu.active {
+  right: 0;
+}
+
+.farm-hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 0 20px;
+  background: linear-gradient(to top, #2e7d32, #4caf50);
+}
+
+.farm-sun {
+  position: absolute;
+  top: 90px;
+  right: 50px;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #ffeb3b, #f57f17);
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgba(255, 235, 59, 0.6);
+  animation: floatSun 6s ease-in-out infinite;
+}
+
+@keyframes floatSun {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.farm-hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+.farm-hero-content p {
+  font-size: 1.2rem;
+}
+.highlight {
+  background: linear-gradient(90deg, #ffeb3b, #ff9800);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.farm-hero-bottom {
+  position: absolute;
+  bottom: 60px;
+  text-align: center;
+}
+.farm-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2e7d32;
+  background: white;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s;
+}
+.farm-btn::before,
+.farm-btn::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #ffeb3b;
+  transition: width 0.4s ease;
+  z-index: -1;
+}
+.farm-btn:hover::before {
+  width: 100%;
+}
+.farm-btn:hover {
+  color: #000;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .farm-links { display: none; }
+  .farm-hamburger { display: flex; }
+  .farm-hero-content h1 { font-size: 2rem; }
+  .farm-hero-content p { font-size: 1rem; }
+}
