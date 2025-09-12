@@ -371,6 +371,91 @@ background: linear-gradient(to bottom, #a5d6a7, #e8f5e9);
 }
 /* third section */
 
+/* fourth section */
+.farm-fourth {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  background: linear-gradient(145deg, #f0fff4, #d6f5d6);
+  color: #2f4f2f;
+}
+
+.farm-fourth-farmers h2,
+.farm-fourth-process h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.farm-fourth-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.farm-fourth-card {
+  position: relative;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+.farm-fourth-icon {
+  font-size: 3rem;
+  transition: opacity 0.5s ease;
+}
+
+.farm-fourth-info {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.farm-fourth-card:hover .farm-fourth-icon {
+  opacity: 0;
+}
+
+.farm-fourth-card:hover .farm-fourth-info {
+  opacity: 1;
+}
+
+.farm-fourth-process {
+  margin-top: 2rem;
+}
+
+.farm-fourth-timeline {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.farm-step {
+  flex: 1 1 150px;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.farm-step span {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.farm-step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* fourth section */
 
 
 /* Responsive */
@@ -382,6 +467,23 @@ background: linear-gradient(to bottom, #a5d6a7, #e8f5e9);
   .farm-hero-content h1 { font-size: 2rem; }
   .farm-hero-content p { font-size: 1rem; }
   /*  first section*/
+
+  /* fourth section  */
+    .farm-fourth {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+  
+  .farm-fourth-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .farm-fourth-timeline {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* fourth section  */
   
 }
 
