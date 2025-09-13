@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  
+
+.hover-box {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 2px solid #28a745;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Text stays above effect */
+.hover-box h2 {
+  position: relative;
+  z-index: 2;
+  color: #2f4f2f;
+  transition: color 0.5s ease;
+}
+
+/* Before - starting empty */
+.hover-box::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #28a745;
+  transition: top 0.6s ease;
+  z-index: 1;
+}
+
+/* After - for secondary effect (optional overlay) */
+.hover-box::after {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #3cb371;
+  transition: bottom 0.6s ease;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+/* Hover effect - fill color slowly */
+.hover-box:hover::before {
+  top: 0;
+}
+
+.hover-box:hover::after {
+  bottom: 0;
+}
+
+.hover-box:hover h2 {
+  color: #fff;
+}
+
+
+
+.hovers-box-horizontal {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 2px solid #1e90ff;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Text stays above */
+.hovers-box-horizontal h1 {
+  position: relative;
+  z-index: 2;
+  color: #1e90ff;
+  transition: color 0.5s ease;
+}
+
+/* Before - slides from left */
+.hovers-box-horizontal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #1e90ff;
+  transition: left 0.6s ease;
+  z-index: 1;
+}
+
+/* After - slides from right */
+.hovers-box-horizontal::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background: #4682b4;
+  transition: right 0.6s ease;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+/* Hover effect */
+.hovers-box-horizontal:hover::before {
+  left: 0;
+}
+
+.hovers-box-horizontal:hover::after {
+  right: 0;
+}
+
+.hovers-box-horizontal:hover h1 {
+  color: #fff;
+}
+
+    </style>
+</head>
+<body>
+     <div class="hover-box">
+  <h2>Hover Me</h2>
+</div>
+
+<div class="hovers-box-horizontal">
+  <h1>Hover Me</h1>
+</div>
+
+</body>
+</html>
